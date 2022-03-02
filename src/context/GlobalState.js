@@ -9,3 +9,8 @@ const initialState = {
     { id: 4, text: 'Camera', amount: 150 },
   ],
 };
+
+//Create Global context
+export const GlobalContext = createContext(initialState);
+
+//Provider component to give acces to the store (state)
