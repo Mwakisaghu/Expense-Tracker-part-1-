@@ -14,3 +14,12 @@ const initialState = {
 export const GlobalContext = createContext(initialState);
 
 //Provider component to give acces to the store (state)
+export const GlobalProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(AppReducer, initialState);
+
+  return (
+    <GlobalContext.Provider value={{ transactions: transactions }}>
+      {children}
+    </GlobalContext.Provider>
+  );
+};
